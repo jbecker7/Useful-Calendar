@@ -1,5 +1,5 @@
 # Useful-Calendar
-Finally, a useful way to remember what the date is built with a modern tech stack.
+Finally, a useful way to remember what the date is, built with a modern tech stack and boasting a beautiful UI.
 
 I'm sick and tired of having to check what the date is. Whether I am signing something or just wondering when the next episode of Oshi no Ko will come out, I am constantly having to check the date.
 

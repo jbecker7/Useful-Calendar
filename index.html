@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <jsuites-calendar id="calendar" value="2023-06-18" format="MM/DD/YYYY"></jsuites-calendar>
+    <div id="spinner"></div>
+    <div id="result"></div>
+    <div id="game-over">
+        <h1>Game Over</h1>
+        <p>You selected the wrong date.</p>
+    </div>
+    <div id="celebration">
+        <h1>Congrats!</h1>
+        <p>You know the date like a normal person. Give yourself a pat on the back :o</p>
+    </div>
+
+    <audio id="loading-audio" src="loading.mp3"></audio>
+    <audio id="gameover-audio" src="gameover.mp3"></audio>
+    <audio id="celebration-audio" src="celebration.mp3"></audio>
+
+    <script src="script.js" type="module"></script>
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    <script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
+    <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+</body>
+</html>

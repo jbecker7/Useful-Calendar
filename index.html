@@ -4,8 +4,14 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
+    <h1>Guess the Date (no cheating)</h1>
+    <div id="wait-time"></div>
     <jsuites-calendar id="calendar" value="2023-06-18" format="MM/DD/YYYY"></jsuites-calendar>
-    <div id="spinner"></div>
+    <div id="hourglass-container">
+        <div id="hourglass"></div>
+        <div id="hourglass-after"></div>
+    </div>
+    
     <div id="result"></div>
     <div id="game-over">
         <h1>Game Over</h1>

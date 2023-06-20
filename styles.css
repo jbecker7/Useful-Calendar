@@ -1,7 +1,7 @@
 body {
-    background-color: lime;
+    background-color: black;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    color: fuchsia;
+    color: white;
     text-shadow: 2px 2px 4px #000000;
     display: flex;
     flex-direction: column;
@@ -11,37 +11,62 @@ body {
     margin: 0;
 }
 
-#spinner {
-    display: none;
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #3498db;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+#hourglass {
+    display: none; /* Hide the hourglass initially */
     position: absolute;
-    top: calc(50% - 60px); /* Adjust position based on spinner's size */
-    left: calc(50% - 60px); /* Adjust position based on spinner's size */
-    z-index: 1; /* Place the spinner above the calendar */
-    animation: pulse 2s ease-in-out infinite;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: white;
+    border-bottom-color: white;
+    top: calc(30% - 50px);
+    left: calc(50% - 50px);
+    animation: flip 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes flip {
     0% {
-        transform: scale(0.8);
-        opacity: 0.4;
+        transform: rotate(0deg);
+        border-top-color: white;
+        border-bottom-color: white;
     }
     50% {
-        transform: scale(1);
-        opacity: 1;
+        transform: rotate(180deg);
+        border-top-color: transparent;
+        border-bottom-color: transparent;
     }
     100% {
-        transform: scale(0.8);
-        opacity: 0.4;
+        transform: rotate(360deg);
+        border-top-color: white;
+        border-bottom-color: white;
     }
 }
+#wait-time {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+}
+
+#elapsed-time {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 10px;
+    border: 2px solid #FFF;
+  }
+  
+
 
 #calendar {
     position: relative; /* Ensure the calendar is positioned correctly */
+    color: black;
 }
 
 #result {
@@ -71,6 +96,7 @@ body {
 .pop-up {
     animation: pop-up 1s ease-out forwards;
 }
+
 @keyframes pop-in-out {
     0% {
         transform: scale(0.5);
@@ -89,7 +115,6 @@ body {
 .pop-in-out {
     animation: pop-in-out 1s ease-in-out infinite;
 }
-
 
 #game-over {
     font-family: 'Calamity-Bold', sans-serif;
